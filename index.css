@@ -1,0 +1,691 @@
+/* メインビジュアル */
+.slick-dots{
+  bottom: -32px!important;
+}
+.slick-dots li button:before{
+  font-size: 10px!important;
+  color: #fff!important;
+}
+.slick-next{
+  display: none!important;
+}
+
+
+
+
+/* 説明 */
+.reserve-ttl{
+  font-size: 24px;
+    background: linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: bounce 1.5s infinite;
+}
+@keyframes bounce {
+  0%{
+    transform: translateY(0);
+  }
+  30%{
+    transform: translateY(-8px);
+  }
+  60%{
+    transform: translateY(0);
+  }
+  80%{
+    transform: translateY(-2px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+.reserve-ttl::before{
+  content: "＼";
+  position:absolute;
+  left: -70px;
+  font-size: 50px;
+  background: linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.reserve-ttl::after{
+  content: "／";
+  position: absolute;
+  right: -70px;
+  top: 0px;
+  font-size: 50px;
+  background: linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.exp-animation{
+  scale: 0;
+  transition: .5s ease-in-out;
+}
+.exp-animation.active{
+  scale: 1;
+}
+.campaign-ttl{
+	font-size: 24px;
+  background: linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+@media screen and (max-width: 567px){
+  .reserve-ttl{
+    font-size: 20px;
+  }
+	.campaign-ttl{
+		font-size: 16px;
+	}
+	.top-exp{
+    font-size: 13px;
+  }
+}
+
+
+
+
+
+/*Plumeria Golfとは*/
+.service-title{
+  font-size: 32px;
+  text-align: center;
+}
+.title1 {
+  overflow: hidden;
+  transform: translate(-100%, 0);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 2s;
+}
+.title1 span {
+  display: block;
+  transform: translate(100%, 0);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 2s;
+}
+.service-title.active,
+.service-title.active span{
+  transform: translate(0, 0)
+}
+
+.service-title2{
+	text-align: center;
+	font-size: 16px;
+	margin: 24px 8px;
+}
+
+@media screen and (max-width: 567px){
+  .service-title{
+    font-size: 24px;
+  }
+	.service{
+margin-top: 24px!important;
+	}
+}
+.service-backimg{
+  display: none;
+}
+
+.service{
+  margin-top:   60px!important;
+  position: relative;
+  list-style: none;
+}
+.service li.active{
+  scale: 1;
+  transform: translate(0, 0);
+}
+
+.service li {
+  position: relative;
+  border: 2px solid white;
+  /* border-image: linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%) 1; */
+  /* border-image: linear-gradient(to right, #43C6AC 0%, #d9e653 100%); */
+  padding: 32px 32px 32px 32px;
+  display: inline-block;
+  scale: 0;
+  transform: translate(-200px, 300px);
+  transition: .5s ease-in-out;
+}
+
+.service li .item img{
+  display: block;
+  width: 100%!important;
+  margin-bottom: 24px;
+}
+
+.service li .item .ttl{
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.service li .item .txt{
+  font-size: 14px;
+  line-height: 2rem;;
+}
+
+.service-animation{
+  scale: 0;
+  transition: .5s ease-in-out;
+}
+.service-animation.active{
+  scale: 1;
+}
+
+@media screen and (min-width: 1024px){
+  .service-backimg {
+      position: absolute;
+      display: inline-block;
+      z-index: 0;
+      left: 8%;
+      width: 60%;
+      height: 60%;
+      background-image: url("https://plumeriagolf.com/wp-content/uploads/2023/06/golf1-1.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.4;
+		pointer-events: none;
+    }
+  .service li{
+    width: 500px;
+    left: 100px;
+  }
+  .service li:first-child{
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    margin-left: -10px;
+  }
+  .service li:nth-child(2){
+    position: absolute;
+    top: 292px;
+    left: 50%;
+    margin-left: -579px;
+  }
+  .service li:nth-child(3){
+    position: relative;
+    margin-top: 856px;
+    margin-left: 41px;
+    left: 50%;
+  }
+
+  .service li .item img{
+    width: 400px; 
+  }
+
+  .service li .item .ttl{
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  .service li .item .txt {
+    width: 400px;
+    line-height: 2rem;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1210px) and (min-width: 1024px) {
+  .service.active{
+    transform: scale(0.83);
+  }
+}
+
+@media screen and (max-width: 1023px){
+  .service{
+    margin-top: 29px;
+  }
+  .service li {
+    width: 90%;
+    padding: 16px;
+  }
+  .service li:first-child{
+    left: 5%;
+  }
+  .service li:nth-child(2){
+    left: 5%;
+    margin-top: 58px;
+  }
+  .service li:nth-child(3){
+    left: 5%;
+    margin-top: 58px;
+  }
+}
+
+
+/* 料金表 */
+.table-contents{
+  padding: 0 24px;
+}
+table.price {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 1px 0;
+  font-size: 15px;
+  color: black;
+  margin-bottom: 8px;;
+  }
+  table.price th,
+  table.price td {
+  width: calc(100% / 3);
+  padding: 16px;
+  }
+  table.price th {
+  vertical-align: middle;
+  text-align: center;
+  color: #000000;
+  font-size: 20px;
+  line-height: 1.5rem;
+  }
+  table.price .pri{
+    font-weight: bold;
+    font-size: 28px;
+    padding: 48px 8px;
+		line-height: 1.2rem
+  }
+  
+  table.price th.c1 {
+  background: #a7431d; 
+		color: white;
+  }
+  
+  table.price th.c2 {
+    background: #b69e53;
+		color: white;
+  }
+  
+  table.price th.c3 {
+  background: #918f8f; 
+		color: white;
+  }
+  
+  table.price td {
+  box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+  text-align: center;
+  padding-top: 15px;
+  border: none;
+  height: 70px;
+  }
+  
+  table.price td.c1 {
+  background: #fff;
+  border-bottom: 1px solid lightgray;
+  }
+  table.price td.c2 {
+  background: #fff;
+  border-bottom: 1px solid lightgray;
+  }
+  table.price td.c3 {
+  background: #fff;
+  border-bottom: 1px solid lightgray;
+  }
+  .plan-min{
+    font-size: 14px; 
+    font-weight: normal;
+  }
+  table.price .pri span{
+    font-size: 14px;
+    margin-left: 8px;
+  }
+
+
+  @media screen and (max-width: 567px) {
+    .table-contents{
+      padding: 0 8px;
+    }
+    table.price th{
+      font-size: 16px;
+    }
+    table.price th,
+    table.price td{
+      padding: 8px;
+    }
+    .plan-min{
+      font-size: 12px;
+    }
+    table.price .pri{
+      font-size: 16px;
+    }
+    table.price .pri span{
+      font-size: 12px;
+      margin-left: 4px;
+    }
+    table.price .time{
+      font-size: 13px;;
+    }
+		 .price2-title{
+    font-size: 16px!important; 
+  }
+		.price2-title .price2-icon{
+	margin: 18px 0px!important;
+}
+  }
+  .price2-title{
+    font-weight: bold; 
+    font-size: 24px; 
+    text-align: center;
+  }
+.price2-title .price2-icon{
+	margin: 24px 0px;
+}
+.use-time{
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	column-gap: 12px;
+}
+.use-time-repeat{
+	padding: 4px 8px; 
+	border: 1px solid black; 
+	color: white; 
+	background: orange;
+	border-radius: 4px;
+	font-size: 12px;
+}
+@media screen and (max-width: 576px){
+	.use-time{
+		display: block;
+	}
+	.use-time-repeat{
+		display: block;
+		margin-bottom: 12px!important;
+	}
+	.use-time .time{
+		font-size: 12px!important;
+	}
+}
+
+
+
+
+
+
+
+/* 機材紹介 */
+.recruit-title{
+  color: #edee22; 
+  font-weight: bold; 
+  margin-bottom: 16px; 
+  text-align: center;
+}
+.recruit-title-sub{
+  text-align: center; 
+  margin-bottom: 48px;
+}
+
+.machine-content{
+  display: flex; 
+  align-items: center;
+  max-width: 960px; 
+  margin: 0 auto 48px auto;
+  flex-wrap: wrap;
+}
+#machine-contentL{
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: .5s ease-in-out;
+}
+#machine-contentR{
+  opacity: 0;
+  transform: translateX(100%);
+  transition: .5s ease-in-out;
+}
+#machine-contentL.active,
+#machine-contentR.active{
+  opacity: 1;
+  transform: translateX(0);
+}
+.machine-content-img{
+  width: 50%; 
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+.machine-content-text{
+  width: 50%; 
+  padding: 0 16px 32px 16px;
+  box-sizing: border-box;
+}
+.machine-content-name{
+  color:#edee22; 
+  font-weight: bold; 
+  font-size: 20px; 
+  margin-bottom: 12px;
+}
+.recruit-title-sub br{
+  display: none;
+}
+
+@media screen and (max-width: 798px){
+  .recruit-title{
+    font-size: 20px;
+  }
+  .recruit-title-sub{
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .recruit-title-sub br{
+    display: block;
+  }
+ .machine-content.second{
+    flex-direction: column-reverse;
+  }
+  .machine-content-img{
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .machine-content-text{
+    width: 100%;
+  }
+	.machine-content-name{
+    font-size: 18px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*機材購入*/
+.sales-back{
+  background-image: url(/img/contact.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.sales-back-bg{
+  background: rgba(0,0,0,0.3);
+}
+.sales-content{
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 100px 24px;
+}
+.sales-title{
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+  color: #000;
+  font-weight: bold;
+  text-shadow: 1px 2px 3px #cda94d;
+}
+.sales-text{
+  font-size: 28px;
+  color: #fff;
+  text-shadow: 1px 2px 3px #212121;
+  line-height: 2em;
+  margin-bottom: 48px;
+}
+.sales-btn{
+  padding: 24px 60px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 4px;
+  color: black;
+  text-decoration: none;
+  background: linear-gradient(to right, #43C6AC 0%, #a4e653 100%);
+}
+.sales-btn:hover{
+  background: linear-gradient(to right, #32e8c4 0%, #a7fc54 100%);
+}
+.leftright{
+  animation: leftright 2s infinite;
+}
+@keyframes leftright {
+  0% {
+    transform: translate(2px, 0px);
+  }
+
+  5% {
+    transform: translate(-2px, 0px);
+  }
+
+  10% {
+    transform: translate(2px, 0px);
+  }
+
+  15% {
+    transform: translate(-2px, 0px);
+  }
+
+  20% {
+    transform: translate(2px, 0px);
+  }
+
+  25% {
+    transform: translate(-2px, 0px);
+  }
+
+  30% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .sales-title{
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  .sales-text{
+    font-size: 16px;
+  }
+  .sales-text .br-none{
+    display: none;
+  }
+  .sales-btn{
+    padding: 24px 16px;
+    font-size: 18px;
+  }
+}
+
+
+
+
+
+/* 店舗情報 */
+.map-content{
+  width: 50%;
+  height: 35vh;
+}
+.addr-company{
+  height: 72px;
+  margin-bottom: 16px;;
+}
+@media screen and (max-width: 567px){
+  .map-content{
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .addr-company{
+    height: 40px;
+  }
+}
+
+
+/* Q&A */
+
+.accordion-005:not([open]) {
+    margin-bottom: 7px;
+}
+
+.accordion-005 summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1.5em;
+    background-color: #f7f7f7;
+    color: #333333;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.accordion-005 summary::-webkit-details-marker {
+    display: none;
+}
+
+.accordion-005 summary::after {
+    transform: translateY(-25%) rotate(45deg);
+    width: 7px;
+    height: 7px;
+    margin-left: 10px;
+    border-bottom: 3px solid #c7c7c7;
+    border-right: 3px solid #c7c7c7;
+    content: '';
+    transition: transform .3s;
+}
+
+.accordion-005[open] summary::after {
+    transform: rotate(225deg);
+}
+
+.accordion-005 p {
+    transform: translateY(-10px);
+    opacity: 0;
+    margin: 0;
+    padding: 1em;
+    color: #333333;
+    transition: .5s ease-in-out;
+}
+
+.accordion-005[open] p {
+    transform: none;
+    opacity: 1;
+}
+
+
+
+
+
+/*お知らせ一覧*/
+.info{
+	padding: 24px;
+}
+.info-title{
+	font-size: 24px;
+	margin-bottom: 16px;
+	text-align: center;
+}
+.info .is-style-more_btn a {
+	background: black;
+	color: white;
+	min-width: 40%;
+	display: inline-block;
+	border-radius: 4px;
+	padding: 24px 60px;
+}
+.info .is-style-more_btn a:hover{
+	  background: white;
+	  color: black;
+	    box-shadow: 0 0 0 1px #000;
+	  transition: 0.5s;
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <title>お問い合わせ-PLUMERIAGOLF(プルメリアゴルフ) &#8211; 大阪市中央区にある完全個室での広々とした贅沢なゴルフスペースの提供</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://kit.fontawesome.com/6dbb4f92f6.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "QUBA_FJeoQz5HSMJU",
+        });
+      })();
+    </script>
+    
+  </head>
+  <header id="customHeader" class="custom-header">
+    <nav class="header-navbar header-container">
+      <a href="/index.html" class="header-brand">
+        <!-- <img src="/img/logo.png" alt="ロゴ" style="height: 100%;" /> -->
+      </a>
+      <div id="headerBurger" class="burger-content">
+        <div id="headerBurgerIcon" class="burger">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </div>
+        <div class="burger-ttl">Menu</div>
+      </div>
+      <div id="headerMenu" class="header-menu">
+        <ul class="menu-inner">
+          <li class="menu-item bg-register">
+            <a href="https://plumeriagolf.hacomono.jp/register/" class="menu-link" target="_blank" rel="noreferrer">新規会員登録</a>
+          </li>
+          <li class="menu-item bg-trial">
+            <a href="https://plumeriagolf.hacomono.jp/reserve/schedule/1/1/" class="menu-link" target="_blank" rel="noreferrer">初回トライアル</a>
+          </li>
+          <li class="menu-item bg-reserve">
+            <a href="https://plumeriagolf.hacomono.jp/reserve/schedule/1/1/" class="menu-link" target="_blank">予約ページ(会員専用)</a>
+          </li>
+          <li class="menu-item">
+            <a href="/index.html" class="menu-link">トップページ</a>
+          </li>
+          <li class="menu-item">
+            <a href="use.html" class="menu-link">利用方法</a>
+          </li>
+          <li class="menu-item">
+            <a href="/index.html/#price-section" class="menu-link">料金</a>
+          </li>
+          <li class="menu-item">
+            <a href="/contact.html" class="menu-link">
+              お問い合わせ
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div id="headerPhoneMenu" class="header-phone-menu">
+    <div class="phone-menu-list bg-register">
+      <a href="https://plumeriagolf.hacomono.jp/register/" target="_blank" rel="noreferrer">新規会員登録</a>
+    </div>
+    <div class="phone-menu-list bg-trial">
+      <a href="https://plumeriagolf.hacomono.jp/reserve/schedule/1/1/" target="_blank" rel="noreferrer">初回トライアル</a>
+    </div>
+    <div class="phone-menu-list bg-reserve">
+      <a href="https://plumeriagolf.hacomono.jp/reserve/schedule/1/1/" target="_blank">予約ページ(会員専用)</a>
+    </div>
+    <div class="phone-menu-list">
+      <a href="/index.html">トップページ</a>
+    </div>
+    <div class="phone-menu-list">
+      <a href="use.html">利用方法</a>
+    </div>
+    <div class="phone-menu-list">
+      <a href="/index.html/#price-section">料金</a>
+    </div>
+    <div class="phone-menu-list">
+      <a href="/contact.html">お問い合わせ</a>
+    </div>
+  </div>
+
+  <body>
+    <main>
+
+      <section class="second-section">
+        <div id="divSendSuccess" class="send-success-msg" style="display: none;">送信が完了しました。</div>
+        <div id="divSendError" class="send-error-msg" style="display: none;">送信に失敗しました。メールアドレスに間違いがないかご確認ください。</div>
+
+        <h2 class="title">お問いわせ</h2>
+
+        <form id="contact-form">
+          <!-- To simplify the tutorial, the value is static. -->
+          <input type="hidden" name="contact_number" value="697483">
+
+          <div class="form-contents">
+            <label>お問い合わせ項目</label>
+            <label for="inputType1" class="input-label">
+              <input id="inputType1" type="radio" class="radio" name="contact_type" value="店舗入会方法について" checked="true"> 
+              店舗入会方法について
+            </label>
+            <label for="inputType2" class="input-label">
+              <input id="inputType2" type="radio" class="radio" name="contact_type" value="機材の購入について"> 
+              機材の購入について
+            </label>
+            <div class="error-message" id="error-contact-type"></div>
+          </div>
+          
+          
+          <div class="form-contents">
+            <label>お名前</label>
+            <input type="text" class="form-control" name="user_name">
+            <div class="error-message" id="error-user-name"></div>
+          </div>
+          <div class="form-contents">
+            <label>メールアドレス</label>
+            <input type="email" class="form-control" name="user_email">
+            <div class="error-message" id="error-user-email"></div>
+          </div>
+          <div class="form-contents">
+            <label>お問合せ内容</label>
+            <textarea name="message" class="form-control" style="height: 120px;"></textarea>
+            <div class="error-message" id="error-message"></div>
+          </div>
+          <div style="text-align: center;">
+            <input id="inputSubmitBtn" type="submit" value="送信する" class="submit-btn">
+          </div>
+        </form>
+      </section>
+
+      <style>
+        
+      </style>
+
+    <!-- <div class="sp-footer">
+      <div style="width: 50%; text-align: center; padding: 16px 8px;"><a href="https://plumeriagolf.hacomono.jp/reserve/schedule/1/1/" class="reserve-btn footer-link" style="display: block; padding: 16px 8px; font-size: 14px;" target="_blank" rel="noreferrer"><i class="fa-solid fa-golf-ball-tee" style="margin-right: 8px;" aria-hidden="true"></i>初回トライアル予約</a>
+      </div>
+      <div style="width: 50%; text-align: center; padding: 16px 8px;">
+        <a href="https://plumeriagolf.hacomono.jp/reserve/schedule/1/1/" class="reserve-btn footer-link" style="display: block; padding: 16px 8px; font-size: 14px;" target="_blank" rel="noreferrer">&nbsp;<i class="fa-solid fa-calendar-alt" style="margin-right: 8px;" aria-hidden="true"></i>予約ページ</a>
+      </div>
+    </div> -->
+
+    <footer>
+      <div style="max-width: 968px; margin: 0 auto; padding-top: 40px;">
+        <div style="margin-bottom: 32px;">
+          <img class="footer-logo ls-is-cached lazyloaded"
+            src="/img/logo.png" alt="ロゴ">
+        </div>
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+          <div class="footer-ttl" style="margin-bottom: 32px;">
+            <div style="font-weight: bold; font-size: 20px; margin-bottom: 32px;">サイトマップ</div>
+            <div style="margin-bottom: 24px;">
+              <a href="#" style="color: white;">
+                トップページ
+              </a>
+            </div>
+            <div style="margin-bottom: 24px;">
+              <a href="/use.html" style="color: white;">
+                利用方法
+              </a>
+            </div>
+            <div style="margin-bottom: 24px;">
+              <a href="/index.html/#price-section" style="color: white;">
+                料金
+              </a>
+            </div>
+            <div style="margin-bottom: 24px;">
+              <a href="/contact.html" style="color: white;">
+                お問合せ
+              </a>
+            </div>
+            <div style="margin-bottom: 24px;"><a href="/term.html" style="color: white;">ご利用規約</a>
+            </div>
+            <div style="margin-bottom: 24px;">
+              <a href="/privacy.thml" style="color: white;">プライバシーポリシー</a>
+            </div>
+            <div style="margin-bottom: 24px;"><a href="/raw.html" style="color: white;">特定商取引法に基づく表記</a></div>
+            <!-- <div style="margin-bottom: 24px;"><a href="＃" style="color: white;">スペシャルインタビュー</a>
+            </div> -->
+    
+          </div>
+          <div class="footer-ttl">
+            <div style="font-weight: bold; font-size: 20px; margin-bottom: 32px;">会員登録・予約</div>
+            <div class="footer-btn" style="text-align: center; margin-bottom: 32px;">
+              <a href="https://plumeriagolf.hacomono.jp/register/" class="online-btn footer-link"
+                style="display: block; font-size: 16px; padding: 16px;" target="_blank" rel="noreferrer">
+                新規会員登録
+              </a>
+            </div>
+            <div class="footer-btn" style="text-align: center; margin-bottom: 16px;">
+              <a href="https://plumeriagolf.hacomono.jp/reserve/schedule/1/1/" class="reserve-btn footer-link"
+                style="display: block; font-size: 16px; padding: 16px;" target="_blank" rel="noreferrer">初回トライアル予約</a>
+            </div>
+            <div class="footer-btn" style="text-align: center; margin-bottom: 100px;">
+              <a
+                href="https://plumeriagolf.hacomono.jp/reserve/schedule/1/1/" class="reserve-btn footer-link"
+                style="display: block; font-size: 16px; padding: 16px;" target="_blank" rel="noreferrer">予約ページ（会員専用）</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- header -->
+  <script type="text/javascript">
+    // window.addEventListener("scroll", () => {
+    //   if(this.scrollY >= 64){
+    //     document.getElementById("customHeader").classList.add("on-scroll");
+    //   } else {
+    //     document.getElementById("customHeader").classList.remove("on-scroll");
+    //   }
+    // });
+    
+    var burger = document.getElementById("headerBurger");
+    var burgerIcon = document.getElementById("headerBurgerIcon");
+    var phoneMenu = document.getElementById("headerPhoneMenu");
+    var body = document.body;
+    burger.addEventListener("click", function(){
+      if(burgerIcon.classList.contains("active")){
+        burgerIcon.classList.remove("active");
+        phoneMenu.classList.remove("active");
+        body.style.overflow = "";
+        if(window.pageYOffset < 64){
+          document.getElementById("customHeader").classList.remove("on-scroll");
+        }
+      } else {
+        burgerIcon.classList.add("active");
+        phoneMenu.classList.add("active");
+        body.style.overflow = "hidden";
+        document.getElementById("customHeader").classList.add("on-scroll");
+      }
+    });
+  </script>
+
+
+<script type="text/javascript">
+  const errorContactType = document.getElementById('error-contact-type');
+  const errorUserName = document.getElementById('error-user-name');
+  const errorUserEmail = document.getElementById('error-user-email');
+  const errorMessage = document.getElementById('error-message');
+
+  const sendSuccessMsg = document.getElementById("divSendSuccess");
+  const sendErrorMsg = document.getElementById("divSendError");
+
+  const submitBtn = document.getElementById("inputSubmitBtn");
+
+  window.onload = function () {
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      sendSuccessMsg.style.display = "none";
+      sendErrorMsg.style.display = "none";
+      submitBtn.value = "送信中...";
+
+      document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+
+      let isValid = true;
+
+      // お問い合わせ項目（ラジオボタン）
+      if (!document.querySelector('input[name="contact_type"]:checked')) {
+        errorContactType.textContent = 'お問い合わせ項目を選択してください。';
+            isValid = false;
+        }
+
+        // お名前
+        const userName = document.querySelector('input[name="user_name"]');
+        if (!userName.value.trim()) {
+          errorUserName.textContent = 'お名前を入力してください。';
+            isValid = false;
+        }
+
+        // メールアドレス
+        const userEmail = document.querySelector('input[name="user_email"]');
+        if (!userEmail.value.trim()) {
+          errorUserEmail.textContent = 'メールアドレスを入力してください。';
+            isValid = false;
+        } else if (!userEmail.value.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+          errorUserEmail.textContent = '正しいメールアドレスを入力してください。';
+            isValid = false;
+        }
+
+        // お問い合わせ内容
+        const message = document.querySelector('textarea[name="message"]');
+        if (!message.value.trim()) {
+          errorMessage.textContent = 'お問い合わせ内容を入力してください。';
+            isValid = false;
+        }
+
+        // すべてのバリデーションが通ったら送信
+      if (isValid) {
+        // these IDs from the previous steps
+        emailjs.sendForm('service_c51fcpy', 'template_h1kg6zb', this)
+          .then(() => {
+            this.reset();
+            setMsg(true);
+          }, (error) => {
+            console.error('FAILED...', error);
+            setMsg(false)
+          });
+      } else {
+        submitBtn.value = "送信する";
+      }
+    });
+  }
+
+  function setMsg(isSuccess){
+    if(isSuccess){
+      sendSuccessMsg.style.display = "block";
+    } else {
+      sendErrorMsg.style.display = "block";
+    }
+
+    submitBtn.value = "送信する";
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+  </body>
+  </html>
+  
