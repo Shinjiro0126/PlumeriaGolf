@@ -19,7 +19,7 @@
         });
       })();
     </script>
-    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <header id="customHeader" class="custom-header">
     <nav class="header-navbar header-container">
@@ -130,6 +130,9 @@
             <textarea name="message" class="form-control" style="height: 120px;"></textarea>
             <div class="error-message" id="error-message"></div>
           </div>
+
+          <div class="g-recaptcha" data-sitekey="6LeH9PQqAAAAAHuH3jUWNCS5e_3yVB8oEJ0nz5cJ" style="display: flex; justify-content: center; margin-bottom: 24px;"></div>
+
           <div style="text-align: center;">
             <input id="inputSubmitBtn" type="submit" value="送信する" class="submit-btn">
           </div>
